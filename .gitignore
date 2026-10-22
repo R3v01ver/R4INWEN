@@ -1,0 +1,16 @@
+settings.json
+settings.json.*
+!settings.example.json
+books/
+corpus/train.jsonl
+corpus/raw/
+corpus/style_samples/
+__pycache__/
+*.pyc
+dist/
+_build/
+*.spec
+.venv/
+venv/
+ollama/
+_internal/
