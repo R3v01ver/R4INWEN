@@ -121,22 +121,31 @@ corpus/
 MIT，见 LICENSE。
 ---
 
-## 关于生成质量（重要）
+## 可以自己加强的部分
 
-本仓库是**社区版**，只附带通用的写作约束：
+程序把提示词和题材规则都放在明处，方便你按自己的写法调整：
 
-- `launch.py` 里的提示词只有格式／长度／语气三条约束
-- `rules.py` 只有 5 条通用写作守则
-- `corpus/rules.json` 是空骨架，没有任何题材规则
+**① 题材规则** — `corpus/rules.json`
 
-**高质量的提示词和题材规则库不在本仓库内。**
+每个题材下有 hook / beat / trope / taboo / struct 五组，生成时会按当前书的题材取用。
+仓库里给的是带示例的空结构，填上你自己的条目就会生效。
 
-所以它开箱只能给初稿，需要你自己改。这不是 bug。
+**② 生成提示词** — `launch.py`
 
-想提高质量，有两条路：
+`CHEAT_USER`（金手指）、`HOOK_USER`（钩子）、`TITLE_USER`（书名）、
+`INTRO_USER`（简介）、`OUTLINE_USER`（章纲）、`SKELETON_USER`（大纲），
+每个都是普通字符串常量，改成你习惯的要求即可。
 
-1. **填 `corpus/rules.json`**：按里面的结构，给每个题材写 hook / beat / trope / taboo / struct
-2. **改 `launch.py`**：把 `CHEAT_USER`、`HOOK_USER`、`TITLE_USER` 这些常量换成你自己的要求
+**③ 写作守则** — `rules.py`
 
-也可以在写作页点「学习」，把你改好的章节存成训练数据（`corpus/train.jsonl`），
-攒够量之后用 Unsloth 做一次 QLoRA，让模型学会你的文风。
+`WRITE_RULES` 是一段直接进系统提示词的文字。往里加你自己的规矩。
+
+**④ 用自己写过的章节训练**
+
+写作页点「学习」，会把你改定的章节存进 `corpus/train.jsonl`（Alpaca 格式）。
+攒够量之后可以用 Unsloth 之类做一次 LoRA，让模型学会你的文风。
+
+---
+
+**生成质量最终取决于三件事**：模型本身、你给的章纲有多具体、上面这些约束调得多准。
+开箱状态是「能跑的起点」，不是成品。
