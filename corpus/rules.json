@@ -1,0 +1,130 @@
+{
+  "仙侠": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "仙侠@女": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "古言": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "古言@女": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "悬疑": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "校园": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "灵异": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "玄幻": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "玄幻@女": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "短剧": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "短剧@女": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "科幻": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "网游": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "通用": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "通用@女": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "都市": {
+    "hook": [
+      "（示例，请替换）开头三句内出现一个具体数字或具体动作"
+    ],
+    "beat": [
+      "（示例，请替换）每 3~4 章要有一次打脸或翻盘"
+    ],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "重生年代": {
+    "hook": [],
+    "beat": [],
+    "trope": [],
+    "taboo": [],
+    "struct": []
+  },
+  "_note": "规则库骨架，本仓库不附带蒸馏好的规则内容。\n结构：顶层键 = 题材名（可用「题材@女」表示女频），每个题材下是 hook/beat/trope/taboo/struct 五个字符串数组。\n程序按书名对应的题材去这里取条目，塞进生成提示词。",
+  "_meta": {
+    "version": 1,
+    "filled": false
+  }
+}
